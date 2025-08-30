@@ -114,6 +114,11 @@ function Detail() {
           {showMore && clickCount === 2 && <More2 shoes={shoes} data={data2} />}
         </div>
         <div className="extra3">{clickCount >= 2 && <None />}</div>
+        <div>
+            <button className = ""></button>
+            <button></button>
+            <button></button>
+        </div>
       </div>
     );
   } else {
