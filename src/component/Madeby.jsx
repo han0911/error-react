@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <div>
+    <div className="footer">
       <div>만든 사람 한석주</div>
     </div>
   );
 }
-export default Footer();
+export default Footer;

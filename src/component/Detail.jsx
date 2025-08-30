@@ -71,7 +71,6 @@ function Detail() {
     axios
       .get(url)
       .then((res) => {
-
         if (clickCount === 0) {
           setData1(res.data);
         } else {
@@ -94,7 +93,7 @@ function Detail() {
     return (
       <div className="dBg">
         {saleAlert && <Alert />}
-        {isLoading ? <Loding />:null}
+        {isLoading ? <Loding /> : null}
         <img src={shoes[product.index]} alt={product.name} />
         <h4 className="de">상품명: {product.name}</h4>
         <h4 className="de">가격: {product.price.toLocaleString()}원</h4>
@@ -108,17 +107,12 @@ function Detail() {
           더보기
         </button>
         <div className="extra">
-          {showMore ? <More plus={plus} data={data1} />:null}
+          {showMore ? <More plus={plus} data={data1} /> : null}
         </div>
         <div className="extra2">
           {showMore && clickCount === 2 && <More2 shoes={shoes} data={data2} />}
         </div>
         <div className="extra3">{clickCount >= 2 && <None />}</div>
-        <div>
-            <button className = ""></button>
-            <button></button>
-            <button></button>
-        </div>
       </div>
     );
   } else {
@@ -188,5 +182,13 @@ function More(props) {
 function Alert() {
   return <AlertCSS>2초동안 할인함</AlertCSS>;
 }
-
+function BBB() {
+  return (
+    <div>
+      <button className="b3"></button>
+      <button></button>
+      <button></button>
+    </div>
+  );
+}
 export default Detail;

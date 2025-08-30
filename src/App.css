@@ -158,3 +158,21 @@ h3 {
     align-items: center;
     font-size: 64px;
 }
+.ch{
+    border: none;
+}
+.ch:hover{
+    border: 1px solid black;
+}
+.footer{
+    width: 100vw;
+    bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
