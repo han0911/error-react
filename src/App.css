@@ -1,0 +1,160 @@
+body {
+  margin: 0px;
+}
+.Top {
+  width: 100vw;
+  height: 80px;
+  background-color: rgb(237, 237, 237);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-left: 30px;
+  margin: 0px;
+}
+.B {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+.B:hover {
+  font-size: 24px;
+  transform: translateY(-2px);
+}
+/* 여기까지 상단탑 */
+
+.main-bg {
+  height: 240px;
+  background-image: url("./img/main.png");
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin-top: 100px;
+  background-position: center center;
+}
+.sub-con {
+  width: 100vw;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+.FC,
+.SC,
+.TC {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.all:hover {
+  border: 1px solid black;
+}
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  background-color: #f4f4f4;
+}
+.title {
+  margin-top: 22px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h4,
+h3 {
+  margin: 0px;
+}
+.button {
+  position: fixed;
+}
+.homework {
+  margin-top: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.delete {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.dBg {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.de {
+  margin-top: 10px;
+}
+.buy {
+  background-color: rgb(187, 0, 0);
+  color: white;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.2s ease-in;
+  margin-top: 10px;
+}
+.buy:hover {
+  transform: translateY(-2px);
+}
+.extra {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.extra2 {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.extra3{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.i {
+  background-color: transparent;
+}
+.datas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.modalbg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
