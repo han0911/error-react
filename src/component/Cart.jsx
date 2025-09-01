@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "react-bootstrap";
 function Cart() {
   return (
@@ -23,4 +24,4 @@ function Cart() {
     </div>
   );
 }
-export default Cart
+export default Cart;
