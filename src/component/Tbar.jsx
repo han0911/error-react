@@ -11,7 +11,7 @@ function Top() {
           <button onClick={() => navigate("/") } className="B">Home</button>
         </div>
         <div>
-          <button className="B">Cart</button>
+          <button className="B" onClick={()=> navigate("/cart")}>Cart</button>
         </div>
         <div>
           <button onClick={() => navigate("/detail/0")} className="B">Detail</button>

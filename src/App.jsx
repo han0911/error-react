@@ -7,6 +7,7 @@ import Footer from "./component/Madeby";
 import Mainbg from "./component/Mainbg";
 import One from "./component/One";
 import Top from "./component/Tbar";
+import Cart from "./component/Cart"
 export let Context1 = createContext();
 function App() {
   let inside = ["내용1입니다", "내용2입니다", "내용3입니다"];
@@ -27,6 +28,7 @@ function App() {
             </Context1.Provider>
           }
         />
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
       <Footer />
     </>
