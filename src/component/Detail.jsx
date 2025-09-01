@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { Context1 } from "../App";
 import Data from "../data/Shdata";
 import fuma from "../img/fuma.png";
 import nike from "../img/nike.png";
@@ -60,7 +61,6 @@ function Detail() {
       return;
     }
 
-    // 로딩 시작
     setIsLoading(true);
 
     const url =
@@ -193,7 +193,6 @@ function Alert() {
   return <AlertCSS>2초동안 할인함</AlertCSS>;
 }
 
-
 function BBB() {
   let [tap, setTap] = useState(null);
   let [visible, setVisible] = useState(false);
@@ -208,17 +207,22 @@ function BBB() {
 
   return (
     <div>
-      <button onClick={() => handleClick(0)} className="b3">버튼1</button>
-      <button onClick={() => handleClick(1)} className="b3">버튼2</button>
-      <button onClick={() => handleClick(2)} className="b3">버튼3</button>
+      <button onClick={() => handleClick(0)} className="b3">
+        버튼1
+      </button>
+      <button onClick={() => handleClick(1)} className="b3">
+        버튼2
+      </button>
+      <button onClick={() => handleClick(2)} className="b3">
+        버튼3
+      </button>
       <Inside tap={tap} visible={visible} />
     </div>
   );
 }
 
 function Inside({ tap, visible }) {
-  let inside = ["내용1입니다", "내용2입니다", "내용3입니다"];
-
+  let { inside } = useContext(Context1);
   return (
     <div className="In">
       <div className={`IN ${visible ? "show" : ""}`}>
