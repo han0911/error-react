@@ -141,13 +141,18 @@ function More2(props) {
     <>
       {props.data.map((item, i) => {
         return (
-          <div key={item.id}>
-            <img src={props.shoes[i]} className="i" alt={item.title} />
-            <div className="datas">
-              <h3>{item.title}</h3>
-              <h4>{item.content}</h4>
-              <h4>{item.price}</h4>
-              <button className="buy">구입하기</button>
+          <div className="BUY">
+            <div key={item.id}>
+              <img src={props.shoes[i]} className="i" alt={item.title} />
+              <div className="datas">
+                <h3>{item.title}</h3>
+                <h4>{item.content}</h4>
+                <h4>{item.price}</h4>
+                <button className="buy">구입하기</button>
+              </div>
+            </div>
+            <div>
+              <BBB></BBB>
             </div>
           </div>
         );
@@ -164,13 +169,18 @@ function More(props) {
     <>
       {props.data.map((item, i) => {
         return (
-          <div key={item.id}>
-            <img src={props.plus[i]} className="i" alt={item.title} />
-            <div className="datas">
-              <h3>{item.title}</h3>
-              <h4>{item.content}</h4>
-              <h4>{item.price}</h4>
-              <button className="buy">구입하기</button>
+          <div className="BUY">
+            <div key={item.id}>
+              <img src={props.plus[i]} className="i" alt={item.title} />
+              <div className="datas">
+                <h3>{item.title}</h3>
+                <h4>{item.content}</h4>
+                <h4>{item.price}</h4>
+                <button className="buy">구입하기</button>
+              </div>
+            </div>
+            <div>
+              <BBB></BBB>
             </div>
           </div>
         );
@@ -182,12 +192,38 @@ function More(props) {
 function Alert() {
   return <AlertCSS>2초동안 할인함</AlertCSS>;
 }
+
+
 function BBB() {
+  let [tap, setTap] = useState(null);
+  let [visible, setVisible] = useState(false);
+
+  let handleClick = (index) => {
+    setVisible(false);
+    setTimeout(() => {
+      setTap(index);
+      setVisible(true);
+    }, 150);
+  };
+
   return (
     <div>
-      <button className="b3"></button>
-      <button></button>
-      <button></button>
+      <button onClick={() => handleClick(0)} className="b3">버튼1</button>
+      <button onClick={() => handleClick(1)} className="b3">버튼2</button>
+      <button onClick={() => handleClick(2)} className="b3">버튼3</button>
+      <Inside tap={tap} visible={visible} />
+    </div>
+  );
+}
+
+function Inside({ tap, visible }) {
+  let inside = ["내용1입니다", "내용2입니다", "내용3입니다"];
+
+  return (
+    <div className="In">
+      <div className={`IN ${visible ? "show" : ""}`}>
+        {tap !== null ? inside[tap] : ""}
+      </div>
     </div>
   );
 }

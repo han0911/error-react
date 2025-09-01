@@ -132,9 +132,9 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.extra3{
-    margin-top: 20px;
-    font-size: 30px;
+.extra3 {
+  margin-top: 20px;
+  font-size: 30px;
 }
 .i {
   background-color: transparent;
@@ -147,32 +147,61 @@ h3 {
   align-items: center;
 }
 .modalbg {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background-color: rgb(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 64px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
 }
-.ch{
-    border: none;
+.ch {
+  border: none;
 }
-.ch:hover{
-    border: 1px solid black;
+.ch:hover {
+  border: 1px solid black;
 }
-.footer{
-    width: 100vw;
-    bottom: 10px;
-    text-align: center;
-    font-size: 40px;
-    background-color: black;
-    color: white;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer {
+  width: 100vw;
+  bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+  background-color: black;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BBB {
+  display: flex;
+  flex-direction: column;
+}
+.B3 {
+  margin-top: 20px;
+}
+.b3 {
+  background-color: transparent;
+  border: none;
+}
+.BA {
+  display: flex;
+  flex-direction: column;
+}
+.inside {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.IN {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.IN.show {
+  opacity: 1;
 }
