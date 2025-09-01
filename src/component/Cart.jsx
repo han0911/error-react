@@ -1,15 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Changename, increaseCount } from "../store/Store";
 
 function Cart() {
-  // state.D에서 데이터 가져오기
+  let dispatch = useDispatch();
   let data1 = useSelector((state) => state.D);
+  let storeName = useSelector((state) => state.F);
 
   console.log(data1);
 
   return (
     <div>
+      {storeName.name}의 가게
+      {storeName.age}
       <Table>
         <thead>
           <tr>
@@ -26,7 +30,14 @@ function Cart() {
                 <td>{i + 2}</td>
                 <td>{item.name}</td>
                 <td>{item.count}</td>
-                <td>안녕</td>
+                <td>
+                  <button onClick={() => {
+                    dispatch(increaseCount(item.id));
+                    dispatch(Changename());
+                  }}>
+                    +
+                  </button>
+                </td>
               </tr>
             );
           })}
